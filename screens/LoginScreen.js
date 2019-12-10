@@ -10,7 +10,7 @@ export default class LoginScreen extends React.Component {
   }
 
   validateName = () => {
-    if (this.state.name.length < 5) {
+    if (this.state.name.length < 3) {
       Alert.alert("Error", "Invalid name");
 
       this.setState({ name: "" });
