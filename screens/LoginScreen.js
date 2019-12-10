@@ -7,7 +7,7 @@ import Firebase from '../Firebase'
 export default class LoginScreen extends React.Component {
   state = {
     name: ""
-  };
+  }
 
   validateName = () => {
     if (this.state.name.length < 5) {
@@ -16,19 +16,19 @@ export default class LoginScreen extends React.Component {
       this.setState({ name: "" });
     } else {
       const name = this.state.name
-      Firebase.add(name);
+      Firebase.add(name)
 
       this.props.navigation.navigate("Chat", {
         name
       })
       
-      this.setState({ name: "" });
+      this.setState({ name: "" })
     }
   }
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center",backgroundColor:"#87CEFA"}}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center"}}>
         <Text style={{color:"#1C1C1C", fontSize: 40,fontWeight:'bold',marginBottom: 40,marginTop: -40}}>ChatApp</Text>
         <TextInput style={{ marginTop:-30, height: 70, width:"80%",borderWidth: StyleSheet.hairlineWidth, borderRadius: 30, paddingHorizontal: 60, color: "black", fontWeight: "600",  backgroundColor:"#fff"}}
           placeholder='Digite o nome'

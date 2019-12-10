@@ -10,7 +10,7 @@ const AppNavigator = createStackNavigator({
   Chat: {
     screen: ChatScreen
   }
-});
+})
 
 export default createAppContainer(AppNavigator);
 
